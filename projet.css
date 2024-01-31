@@ -1,0 +1,476 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: cursive;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  display: none;
+  border: solid 1.5px;
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+label {
+  position: relative;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  z-index: 100;
+}
+
+#anim {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  color: #ffffff99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  cursor: pointer;
+  margin: 0 4px;
+  margin-left: 100px;
+  border-radius: 30px;
+  box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+    4px 4px 6px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* div:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 75px;
+  height: 38px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+} */
+
+input[type="checkbox"]:checked ~ #anim {
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+    inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+  color: yellow;
+  text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+  animation: glow 1.5s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.back-video {
+  position: absolute;
+  width: 1300px;
+  right: 0;
+  top: 0;
+  bottom: 0px;
+  z-index: -1;
+}
+#navbar {
+  background: whitesmoke;
+}
+#logo {
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+  font-family: Dancing Script;
+  margin-bottom: 5px;
+}
+#logo span {
+  color: crimson;
+  font-family: Dancing Script;
+}
+.navbar-toggler span {
+  color: crimson;
+}
+.navbar-nav {
+  margin-left: 20px;
+}
+.nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 550;
+  color: black;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.5 ease;
+}
+.nav-item .nav-link:hover {
+  background: crimson;
+  color: whitesmoke;
+}
+#navbar form button {
+  background: crimson;
+  color: whitesmoke;
+  border: none;
+}
+.home {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(
+    rgba(72, 69, 69, 0.7),
+    rgba(20, 20, 31, 0.7)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*filter: blur(2px);*/
+}
+.home .content {
+  text-align: center;
+  padding-top: 200px;
+}
+.home .content h5 {
+  color: whitesmoke;
+  font-size: 38px;
+  font-weight: 500;
+}
+.home .content h1 {
+  color: whitesmoke;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 65px;
+}
+.changecontent::after {
+  content: " ";
+  color: crimson;
+  animation: changetext 10s infinite linear;
+}
+@keyframes changetext {
+  0% {
+    content: "Istanbul";
+  }
+  20% {
+    content: "Ankara";
+  }
+  40% {
+    content: "Bursa";
+  }
+  60% {
+    content: "Izmir";
+  }
+  80% {
+    content: "Antalya";
+  }
+  100% {
+    content: "Budrum";
+  }
+}
+.home .content p {
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+.home .content a {
+  padding: 10px;
+  background: whitesmoke;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 550;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.home .content a:hover {
+  background: crimson;
+  color: whitesmoke;
+}
+.book {
+  padding: 50px;
+  background: whitesmoke;
+}
+.main-text h1 {
+  text-align: center;
+  font-weight: 600;
+}
+.main-text h1 span {
+  color: crimson;
+}
+.book .card {
+  border-radius: 50px;
+  box-shadow: 0px 5px 5px -6px black;
+  height: 500px;
+  width: 500px;
+}
+.book .card video {
+  border-radius: 50px;
+  height: 500px;
+  width: 500px;
+}
+.book .row {
+  margin-top: 30px;
+}
+.book form input {
+  padding: 10px;
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px -6px black;
+}
+.book form textarea {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px -6px black;
+  resize: none;
+  height: 200px;
+}
+.book .submit {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 550;
+  background: crimson;
+  color: whitesmoke;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+.book .submit:hover {
+  width: 190px;
+}
+.main-txt h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600;
+}
+.main-txt h1 span {
+  color: crimson;
+}
+.packages .card {
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 1) 0px 4px 5px;
+  background: whitesmoke;
+}
+.packages .card img {
+  border-radius: 20px;
+  transition: 0.7s;
+  padding: auto;
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(100%) blur(1px);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.packages .card img:hover {
+  -webkit-filter: grayscale(100%) blur(0px);
+  filter: grayscale(0) blur(0);
+}
+.packages .card .card-body {
+  background: transparent;
+}
+.packages .card .card-body h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.packages .card .card-body #a {
+  background: none;
+  color: black;
+}
+.packages .card .card-body p {
+  font-size: 15px;
+}
+.checked {
+  color: rgb(255, 208, 0);
+}
+.packages .card .card-body h6 {
+  font-size: 20px;
+}
+.packages .card .card-body a {
+  padding: 10px;
+  text-decoration: none;
+  background: crimson;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+#book {
+  transition: 0.5s;
+}
+#book:hover {
+  background: whitesmoke;
+  color: crimson;
+}
+.services {
+  background: whitesmoke;
+  margin-top: 50px;
+  height: 600px;
+}
+.services .card {
+  box-shadow: rgba(0, 0, 0, 1) 0px 2px 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.services .card i {
+  font-size: 50px;
+  text-align: center;
+  color: crimson;
+  margin-top: 20px;
+}
+.services .card:hover {
+  background: crimson;
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.605);
+  transform: translate(5px, 0);
+}
+.services .card:hover i {
+  color: #ffffff;
+}
+.services .card .card-body h3 {
+  font-weight: 600;
+}
+.services .card .card-body {
+  text-align: center;
+}
+.gallary {
+  margin-top: 50px;
+}
+.gallary .card {
+  box-shadow: rgba(0, 0, 0, 1) 0px 4px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.gallary .card img {
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.gallary .card img:hover {
+  transform: scale(1.1);
+}
+.about {
+  padding: 50px;
+  margin-top: 50px;
+  background: whitesmoke;
+}
+.about .card {
+  border-radius: 20px;
+}
+.about .card video {
+  border-radius: 20px;
+}
+.about h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.about p {
+  font-weight: 500;
+}
+#about-btn {
+  width: 150px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+  background: crimson;
+  color: whitesmoke;
+  letter-spacing: 2px;
+  font-weight: 550;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+#about-btn:hover {
+  width: 190px;
+}
+#footer {
+  width: 100%;
+  margin-top: 50px;
+  background: whitesmoke;
+  text-align: center;
+}
+#footer h1 {
+  font-weight: 600;
+  padding-top: 50px;
+}
+#footer h1 span {
+  color: crimson;
+}
+.social-links i {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  background: black;
+  color: whitesmoke;
+  margin-left: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.social-links i:hover {
+  background: crimson;
+}
+#twitter:hover {
+  background: skyblue;
+}
+#facebook:hover {
+  background: rgb(37, 37, 255);
+}
+#instagram:hover {
+  background: rgb(217, 0, 255);
+}
+#pinterest:hover {
+  background: rgb(255, 0, 0);
+}
+/*** clients ***/
+
+/*** Team ***/
+
+.team-item {
+  background: whitesmoke;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.395);
+  border-radius: 80px;
+}
+.team-item img {
+  transition: 0.5s;
+  border-radius: 80px;
+}
+.team-item:hover img {
+  transform: scale(0.9);
+  border-radius: 80px;
+}
+
+.team-item .btn {
+  color: crimson;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: rgb(220, 20, 60) solid 1px;
+  transition: 0.5s;
+}
+
+.team-item .btn:hover {
+  background: crimson;
+  color: whitesmoke;
+  transform: scale(1.2);
+  border: rgb(255, 255, 255) solid 1px;
+}
